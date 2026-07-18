@@ -20,7 +20,7 @@ Contract Name:
 FlowPayPayment
 
 Contract Address:
-0xd229DCB8D8FDc08030a41E76096069b66D51EACa
+0xB3adC8E6b845F71e3262cCE1D8e7AeBDc911cDfb
 
 Network:
 Arc Testnet
