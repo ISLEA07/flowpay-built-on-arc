@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-ink-600;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink-900 text-mist-50 font-body antialiased;
+    background-image: radial-gradient(circle at 50% -10%, rgba(62, 134, 245, 0.10), transparent 55%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+  ::selection {
+    background: rgba(52, 231, 196, 0.25);
+  }
+  :focus-visible {
+    outline: 2px solid #34E7C4;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .flow-text {
+    @apply bg-flow-gradient bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-flow-gradient px-5 py-3 font-display text-sm font-semibold text-ink-950 shadow-glow transition-transform duration-150 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none disabled:hover:scale-100;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-ink-600 bg-ink-800/60 px-5 py-3 font-display text-sm font-semibold text-mist-100 transition-colors hover:border-flow-teal/50 hover:bg-ink-700/60 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .card {
+    @apply rounded-2xl border border-ink-600 bg-ink-800/60 shadow-card backdrop-blur-sm;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-ink-600 bg-ink-800/80 px-3 py-1 text-xs font-mono text-mist-300;
+  }
+
+  .field-label {
+    @apply mb-1.5 block text-xs font-medium uppercase tracking-wider text-mist-300;
+  }
+
+  .field-input {
+    @apply w-full rounded-lg border border-ink-600 bg-ink-900/70 px-3.5 py-2.5 font-mono text-sm text-mist-50 placeholder:text-mist-400 outline-none transition-colors focus:border-flow-teal/60;
+  }
+}
